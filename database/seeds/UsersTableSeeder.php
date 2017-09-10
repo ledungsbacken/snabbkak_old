@@ -21,5 +21,16 @@ class UsersTableSeeder extends Seeder
             'email' => 'tkdanne@gmail.com',
             'password' => bcrypt('secret'),
         ]);
+        $users_roles = [
+            [
+                'user_id' => 1,
+                'role_id' => 3
+            ],
+            [
+                'user_id' => 2,
+                'role_id' => 3
+            ],
+        ];
+        DB::table('role_user')->insert($users_roles);
     }
 }
