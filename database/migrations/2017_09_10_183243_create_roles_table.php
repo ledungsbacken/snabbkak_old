@@ -19,6 +19,7 @@ class CreateRolesTable extends Migration
             $table->string('label');
             $table->string('description')->nullable();
         });
+        
             DB::table('roles')->insert([
                 [
                     'name' => 'user',
