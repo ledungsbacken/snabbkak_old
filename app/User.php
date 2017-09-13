@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use App\Role;
+use App\Recepie;
 
 class User extends Authenticatable
 {
@@ -41,5 +42,9 @@ class User extends Authenticatable
             $hasPermission = $role->hasPermission($permission);
         });
         return $hasPermission;
+    }
+
+    public function recepies() {
+        return $this->hasMany(Recepie::class);
     }
 }

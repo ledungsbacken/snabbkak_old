@@ -20,7 +20,7 @@ class CreateIngredientsTable extends Migration
             $table->string('amount');
             $table->timestamps();
 
-            $table->foreign('recepie_id')->references('id')->on('recepies');
+            // $table->foreign('recepie_id')->references('id')->on('recepies');
         });
     }
 

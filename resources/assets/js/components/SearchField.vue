@@ -1,5 +1,8 @@
 <template lang="html">
-    <input type="text" class="form-control" name="search-field" id="search-field" />
+    <div class="form-inline">
+        <label for="search-field">Sök: </label>
+        <input type="text" class="form-control" name="search-field" id="search-field" />
+    </div>
 </template>
 
 <script>
