@@ -4,13 +4,15 @@ use Illuminate\Database\Seeder;
 
 use App\User;
 use App\Role;
+use App\Recepie;
+use App\Ingredient;
 use Faker\Factory as FakerFactory;
 
 
 class UsersTableSeeder extends Seeder
 {
 
-    // const N_RECEPIES_PER_USER = 10;
+    const N_RECEPIES_PER_USER = 10;
 
     private $devUsers = [
         [
@@ -50,10 +52,16 @@ class UsersTableSeeder extends Seeder
             );
 
             // Create recepies and link to user
-            // $recepies = factory(Recepies::class, self:: N_RECEPIES_PER_USER)->create([]);
-            // $recepies->each(function($recepie) use ($user) {
-            //     $user->recepies()->attach($recepie);
-            // });
+            $recepies = factory(Recepie::class, self::N_RECEPIES_PER_USER)->create([]);
+            $recepies->each(function($recepie) use ($user) {
+                Recepie::where('id', $recepie->id)->update(['user_id' => $user->id]);
+
+                // Create ingredients and link to recepie
+                $ingredients = factory(Ingredient::class, rand(4, 10))->create([]);
+                $ingredients->each(function($ingredient) use ($recepie) {
+                    Ingredient::where('id', $ingredient->id)->update(['recepie_id' => $recepie->id]);
+                });
+            });
 
             // Set role
             $roles = Role::all();

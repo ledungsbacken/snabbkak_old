@@ -21,8 +21,7 @@ class Ingredient extends Model
      */
     protected $fillable = [
         'recepie_id',
-        'name',
-        'owner_id'
+        'name'
     ];
 
     public function recepie() {

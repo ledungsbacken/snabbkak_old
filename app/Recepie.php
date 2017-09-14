@@ -16,6 +16,16 @@ class Recepie extends Model
     public $asYouType = true;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'user_id'
+    ];
+
+    /**
      * Get the indexable data array for the model.
      *
      * @return array
@@ -29,15 +39,10 @@ class Recepie extends Model
         return $array;
     }
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name',
-        'owner_id'
-    ];
+    public function searchableAs()
+    {
+        return 'recepies_index';
+    }
 
     public function user() {
         return $this->belongsTo(User::class);
