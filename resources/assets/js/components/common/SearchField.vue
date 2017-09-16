@@ -8,13 +8,13 @@
 <script>
 export default {
 
-  name: 'Search-field',
+    name: 'Search-field',
 
-  data () {
+    data () {
     return {
 
     };
-  }
+    }
 };
 </script>
 

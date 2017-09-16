@@ -13,12 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <recepies>
-                        <recepie></recepie>
-                        <recepie></recepie>
-                        <recepie></recepie>
-                        <recepie></recepie>
-                    </recepies>
+                    <div id="app">
+                        <recepies></recepies>
+                    </div>
                 </div>
             </div>
         </div>
