@@ -17,7 +17,12 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            console.log('Component mounted.');
+
+            $http.get('/user')
+                .then(response => {
+                    console.log(response.data);
+                });
         }
     }
 </script>

@@ -17,6 +17,16 @@ class RecepieController extends Controller
         return Recepie::get();
     }
 
+    /**
+     * List of resource
+     *
+     * @return \App\Recepie
+     */
+    public function search($query)
+    {
+        return Recepie::search($query)->get();
+    }
+
 
     /**
      * Store a newly created file on resource.

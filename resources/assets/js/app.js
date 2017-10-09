@@ -16,9 +16,6 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('search-field', require('./components/common/SearchField.vue'));
-Vue.component('recepies', require('./components/recepies/Recepies.vue'));
-Vue.component('recepie', require('./components/recepies/Recepie.vue'));
 
 const app = new Vue({
     el: '#app'

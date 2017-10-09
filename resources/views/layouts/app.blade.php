@@ -39,10 +39,6 @@
                         &nbsp;
                     </ul>
 
-                    <ul class="nav navbar-nav">
-                        <li><search-field></search-field></li>
-                    </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
