@@ -28,9 +28,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                    <router-link class="navbar-brand" to="/">{{ config('app.name', 'Laravel') }}</router-link>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
