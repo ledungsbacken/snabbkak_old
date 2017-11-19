@@ -12,9 +12,9 @@ class RecepieController extends Controller
      *
      * @return \App\Recepie
      */
-    public function index()
+    public function index(Request $request, Recepie $recepie)
     {
-        return Recepie::get();
+        return $recepie->paginate($request['count']);
     }
 
     /**

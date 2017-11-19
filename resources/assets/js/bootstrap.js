@@ -23,9 +23,9 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-$http = axios.create({
-    'baseURL' : 'api/'
-});
+// $http = axios.create({
+//     'baseURL' : 'api/'
+// });
 
 /**
  * Next we will register the CSRF Token as a common header with Axios so that

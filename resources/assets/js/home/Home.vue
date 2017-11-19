@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
@@ -27,5 +27,5 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style scoped>
 </style>

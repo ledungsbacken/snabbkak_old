@@ -35,7 +35,16 @@ const router = new VueRouter({
         {
             path: '/example',
             component: require('./components/Example.vue')
-        }
+        },
+        {
+            path: '/recepie',
+            component: require('./recepies/View.vue')
+        },
+        {
+            path: '/recepie/:id',
+            component: require('./recepie/View.vue'),
+            props: true,
+        },
     ]
 });
 
